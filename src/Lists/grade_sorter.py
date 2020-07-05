@@ -4,24 +4,17 @@
 print("Welcome!")
 
 #Gets user input
-grades = []
+grades = [int(input("Enter your grade: ")) for i in range(5)]
 
-grades.append(int(input("Enter your grade: ")))
-grades.append(int(input("Enter your grade: ")))
-grades.append(int(input("Enter your grade: ")))
-grades.append(int(input("Enter your grade: ")))
-grades.append(int(input("Enter your grade: ")))
-
+#Printing the grades
 print(f"Your grades are {grades}")
 
 # Prints the sorted list
-grades.sort(reverse = True)
-print(f"Your grades from highest to lowest are {grades}")
+print(f"Your grades from highest to lowest are {grades.sort(reverse = True)}")
 
 # Drops lowest grades
 print("The lowest two grades will now be dropped.")
-print(f"Removed grade: {grades.pop()}")
-print(f"Removed grade: {grades.pop()}")
+for i in range(2): print(f"Removed grade: {grades.pop()}")
 
 # Prints remaining grades
 print(f"Your remaining grades are {grades}")
